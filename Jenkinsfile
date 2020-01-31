@@ -21,6 +21,11 @@ pipeline {
   	}
 
 	stages {
+	    stage("get code"){
+	        steps{
+	            sh " git clone -b master https://github.com/kaushikkv/BIT.git"
+	        }
+	    }
         stage('change file') {
         steps {
             sh '''
